@@ -12,5 +12,6 @@ export const LOGGED_OUT = 'LOGGED_OUT';
 
 export const REGISTER = 'REGISTER';
 export const REGISTERING = 'REGISTERING';
+export const REGISTERED = 'REGISTERED';
 
 export const SHOW_LOG_IN = 'SHOW_LOG_IN';
