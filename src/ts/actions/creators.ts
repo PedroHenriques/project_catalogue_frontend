@@ -10,3 +10,10 @@ export function authenticate(
     payload,
   });
 }
+
+export function loggingIn(): ActionInterfaces.ILogginInAction {
+  return({
+    type: ActionTypes.LOGGIN_IN,
+    payload: {},
+  });
+}
