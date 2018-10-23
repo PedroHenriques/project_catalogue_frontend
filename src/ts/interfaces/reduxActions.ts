@@ -30,6 +30,10 @@ export interface ILogOutAction extends IFluxStandardAction {
   payload: {},
 }
 
+export interface ILoggedOutAction extends IFluxStandardAction {
+  payload: {},
+}
+
 export interface IShowLogInAction extends IFluxStandardAction {
   payload: {},
 }
