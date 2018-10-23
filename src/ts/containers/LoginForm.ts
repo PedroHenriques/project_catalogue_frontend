@@ -10,7 +10,7 @@ interface IMapStateToProps {
 }
 
 interface IMapDispatchToProps {
-  handleSubmit: (args: { email: string, pw: string }) => void,
+  handleSubmit: (args: { email: string, password: string }) => void,
 }
 
 const mapStateToProps = (state: IState): IMapStateToProps => {
@@ -21,7 +21,7 @@ const mapDispatchToProps = (
   dispatch: Dispatch
 ): IMapDispatchToProps => {
   return({
-    handleSubmit: (args: { email: string, pw: string }): void => {
+    handleSubmit: (args: { email: string, password: string }): void => {
       dispatch(authenticate({ ...args }));
     },
   });
