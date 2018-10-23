@@ -1,6 +1,10 @@
 'use strict';
 import * as React from 'react';
 
+export interface IProps {
+  handleSubmit: (args: { email: string, pw: string }) => void,
+}
+
 interface IState {
   email: string,
   password: string,
