@@ -50,6 +50,10 @@ export interface IRegisteringAction extends IFluxStandardAction {
   payload: {},
 }
 
+export interface IRegisteredAction extends IFluxStandardAction {
+  payload: {},
+}
+
 export interface IShowLogInAction extends IFluxStandardAction {
   payload: {},
 }
