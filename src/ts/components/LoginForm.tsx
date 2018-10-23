@@ -1,12 +1,12 @@
 'use strict';
 import * as React from 'react';
 
-interface ILoginFormState {
+interface IState {
   email: string,
   password: string,
 }
 
-export default class LoginForm extends React.Component<{}, ILoginFormState> {
+export default class LoginForm extends React.Component<{}, IState> {
   constructor(props: {}) {
     super(props);
 
