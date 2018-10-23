@@ -1,7 +1,7 @@
 'use strict';
 import { Dispatch, Store } from 'redux';
 import { LOG_OUT } from '../actions/actionTypes';
-import { showLogIn, loggedOut } from '../actions/creators';
+import { home, loggedOut } from '../actions/creators';
 import { logOut } from '../utils/backendFacade';
 import { IState } from '../interfaces/redux';
 import { IFluxStandardAction } from '../interfaces/reduxActions';
