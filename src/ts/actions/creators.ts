@@ -39,6 +39,13 @@ export function logOut(): ActionInterfaces.ILogOutAction {
   });
 }
 
+export function loggedOut(): ActionInterfaces.ILoggedOutAction {
+  return({
+    type: ActionTypes.LOGGED_OUT,
+    payload: {},
+  });
+}
+
 export function showLogIn(): ActionInterfaces.IShowLogInAction {
   return({
     type: ActionTypes.SHOW_LOG_IN,
