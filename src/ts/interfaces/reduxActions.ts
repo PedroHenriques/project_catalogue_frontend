@@ -7,6 +7,10 @@ export interface IFluxStandardAction extends Action {
   meta?: any,
 }
 
+export interface IHomeAction extends IFluxStandardAction {
+  payload: {},
+}
+
 export interface ILogInAction extends IFluxStandardAction {
   payload: {
     email: string,
