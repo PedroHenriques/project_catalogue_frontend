@@ -76,3 +76,24 @@ export const registerAccount = (
   }
   return(response.json());
 });
+
+export const activateAccount = (
+  args: { email: string, token: string }
+): Promise<void> => fetch(
+  `${apiBaseUrl}users/activate/`,
+  {
+    ...baseRequestPayload,
+    method: 'POST',
+    body: JSON.stringify({
+      email: args.email,
+      token: args.token,
+    }),
+
+  }
+)
+.then(response => {
+  if (!response.ok) {
+    return(Promise.reject(defaultErrorMsg));
+  }
+  return(response.json());
+});
