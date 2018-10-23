@@ -16,6 +16,9 @@ const handleLogIn = (store: Store<IState, IFluxStandardAction>) =>
         email: (action as ILogInAction).payload.email,
         password: (action as ILogInAction).payload.password,
       })
+      .then(() => {
+        store.dispatch(loggedIn());
+      })
       .catch(error => {
         return;
       });
