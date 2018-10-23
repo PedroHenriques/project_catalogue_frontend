@@ -18,3 +18,25 @@ const baseRequestPayload: IBaseRequestPayload = {
   },
   credentials: 'include',
 };
+
+export const login = (
+  args: { email: string, password: string }
+): Promise<void> => fetch(
+  `${apiBaseUrl}login/`,
+  {
+    ...baseRequestPayload,
+    method: 'POST',
+    body: JSON.stringify({
+      email: args.email,
+      password: args.password,
+    }),
+  }
+)
+.then(response => {
+  if (response.status === 401) {
+    return(Promise.reject('The Email/Password combination is not valid'));
+  } else if (!response.ok) {
+    return(Promise.reject(defaultErrorMsg));
+  }
+  return(response.json());
+});
