@@ -32,6 +32,9 @@ export default function user(
     case LOG_IN_FAILED:
       return({ ...state, isLoggingIn: false });
 
+    case LOGGED_OUT:
+      return({ ...state, isLoggedIn: false });
+
     default:
       return(state);
   }
