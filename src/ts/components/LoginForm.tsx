@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 export interface IProps {
-  handleSubmit: (args: { email: string, pw: string }) => void,
+  handleSubmit: (args: { email: string, password: string }) => void,
 }
 
 export interface IState {
