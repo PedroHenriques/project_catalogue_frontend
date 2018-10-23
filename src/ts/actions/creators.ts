@@ -53,6 +53,15 @@ export function loggedOut(): ActionInterfaces.ILoggedOutAction {
   });
 }
 
+export function register(
+  payload: { email: string, password: string, name: string }
+): ActionInterfaces.IRegisterAction {
+  return({
+    type: ActionTypes.REGISTER,
+    payload,
+  });
+}
+
 export function showLogIn(): ActionInterfaces.IShowLogInAction {
   return({
     type: ActionTypes.SHOW_LOG_IN,
