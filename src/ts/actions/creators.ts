@@ -83,6 +83,29 @@ export function registerFailed(): ActionInterfaces.IRegisterFailedAction {
   });
 }
 
+export function activateAccount(
+  payload: { email: string, token: string }
+): ActionInterfaces.IActivateAccountAction {
+  return({
+    type: ActionTypes.ACTIVATE_ACCOUNT,
+    payload,
+  });
+}
+
+export function activatingAccount(): ActionInterfaces.IActivatingAccountAction {
+  return({
+    type: ActionTypes.ACTIVATING_ACCOUNT,
+    payload: {},
+  });
+}
+
+export function activatedAccount(): ActionInterfaces.IActivatedAccountAction {
+  return({
+    type: ActionTypes.ACTIVATED_ACCOUNT,
+    payload: {},
+  });
+}
+
 export function showLogIn(): ActionInterfaces.IShowLogInAction {
   return({
     type: ActionTypes.SHOW_LOG_IN,
