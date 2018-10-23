@@ -31,3 +31,10 @@ export function logInFailed(): ActionInterfaces.ILogInFailedAction {
     payload: {},
   });
 }
+
+export function showLogIn(): ActionInterfaces.IShowLogInAction {
+  return({
+    type: ActionTypes.SHOW_LOG_IN,
+    payload: {},
+  });
+}
