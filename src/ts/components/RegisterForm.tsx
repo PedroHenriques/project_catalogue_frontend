@@ -20,10 +20,35 @@ export default class RegisterForm extends React.Component<{}, IState> {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   public handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
+    return;
+  }
+
+  public handleChange(event: React.FormEvent<HTMLInputElement>): void {
+    switch (event.currentTarget.id) {
+      case 'register-email':
+        this.setState({ email: event.currentTarget.value });
+        break;
+
+      case 'register-pw':
+        this.setState({ password: event.currentTarget.value });
+        break;
+
+      case 'register-conf-pw':
+        this.setState({ confPassword: event.currentTarget.value });
+        break;
+
+      case 'register-name':
+        this.setState({ name: event.currentTarget.value });
+        break;
+
+      default:
+        break;
+    }
     return;
   }
 
