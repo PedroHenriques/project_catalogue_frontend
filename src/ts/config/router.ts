@@ -5,7 +5,7 @@ import * as queryString from 'querystring';
 import * as ActionTypes from '../actions/actionTypes';
 
 const routesMap = {
-  HOME: '/',
+  [ActionTypes.HOME]: '/',
 };
 
 const history = createBrowserHistory();
