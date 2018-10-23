@@ -13,3 +13,7 @@ export interface ILogInAction extends IFluxStandardAction {
     password: string
   },
 }
+
+export interface ILogginInAction extends IFluxStandardAction {
+  payload: {},
+}
