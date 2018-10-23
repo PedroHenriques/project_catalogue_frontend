@@ -1,10 +1,10 @@
 'use strict';
 import {
-  LOGGING_IN, LOGGED_IN, LOG_IN_FAILED
+  LOGGING_IN, LOGGED_IN, LOG_IN_FAILED, LOGGED_OUT
 } from '../actions/actionTypes';
 import { IUser } from '../interfaces/redux';
 import {
-  ILoggingInAction, ILoggedInAction, ILogInFailedAction
+  ILoggingInAction, ILoggedInAction, ILogInFailedAction, ILoggedOutAction
 } from '../interfaces/reduxActions';
 
 const initialState: IUser = {
