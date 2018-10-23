@@ -11,7 +11,7 @@ export function authenticate(
   });
 }
 
-export function loggingIn(): ActionInterfaces.ILogginInAction {
+export function loggingIn(): ActionInterfaces.ILoggingInAction {
   return({
     type: ActionTypes.LOGGING_IN,
     payload: {},
