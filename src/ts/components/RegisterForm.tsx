@@ -56,10 +56,15 @@ export default class RegisterForm extends React.Component<{}, IState> {
     return(
       <div id='register-form'>
         <form onSubmit={this.handleSubmit}>
-          <p><input type='email' placeholder='Email' /></p>
-          <p><input type='password' placeholder='Password' /></p>
-          <p><input type='password' placeholder='Confirm Password' /></p>
-          <p><input type='text' placeholder='Name' /></p>
+          <p><input type='email' id='register-email' placeholder='Email'
+            value={this.state.email} onChange={this.handleChange} /></p>
+          <p><input type='password' id='register-pw' placeholder='Password'
+            value={this.state.password} onChange={this.handleChange} /></p>
+          <p><input type='password' id='register-conf-pw'
+            placeholder='Confirm Password' value={this.state.confPassword}
+            onChange={this.handleChange} /></p>
+          <p><input type='text' id='register-name' placeholder='Name'
+            value={this.state.name} onChange={this.handleChange} /></p>
           <p><button type='submit'>Register</button></p>
         </form>
       </div>
