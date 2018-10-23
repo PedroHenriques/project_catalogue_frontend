@@ -5,7 +5,7 @@ export interface IProps {
   handleSubmit: (args: { email: string, pw: string }) => void,
 }
 
-interface IState {
+export interface IState {
   email: string,
   password: string,
 }
