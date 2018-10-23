@@ -6,6 +6,7 @@ import * as ActionTypes from '../actions/actionTypes';
 
 const routesMap = {
   [ActionTypes.HOME]: '/',
+  [ActionTypes.LOG_OUT]: '/logout',
 };
 
 const history = createBrowserHistory();
