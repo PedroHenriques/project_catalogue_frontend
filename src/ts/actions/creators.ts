@@ -24,3 +24,10 @@ export function loggedIn(): ActionInterfaces.ILoggedInAction {
     payload: {},
   });
 }
+
+export function logInFailed(): ActionInterfaces.ILogInFailedAction {
+  return({
+    type: ActionTypes.LOG_IN_FAILED,
+    payload: {},
+  });
+}
