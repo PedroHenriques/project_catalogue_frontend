@@ -2,6 +2,7 @@
 import { connectRoutes } from 'redux-first-router';
 import { createBrowserHistory } from 'history';
 import * as queryString from 'querystring';
+import * as ActionTypes from '../actions/actionTypes';
 
 const routesMap = {
   HOME: '/',
