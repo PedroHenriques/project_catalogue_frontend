@@ -6,3 +6,10 @@ export interface IFluxStandardAction extends Action {
   payload: any,
   meta?: any,
 }
+
+export interface ILogInAction extends IFluxStandardAction {
+  payload: {
+    email: string,
+    pw: string
+  },
+}
