@@ -54,3 +54,25 @@ export const logOut = (): Promise<boolean> => fetch(
   }
   return(Promise.resolve(true));
 });
+
+export const registerAccount = (
+  args: { email: string, password: string, name: string }
+): Promise<void> => fetch(
+  `${apiBaseUrl}users/`,
+  {
+    ...baseRequestPayload,
+    method: 'POST',
+    body: JSON.stringify({
+      email: args.email,
+      password: args.password,
+      name: args.name,
+    }),
+
+  }
+)
+.then(response => {
+  if (!response.ok) {
+    return(Promise.reject(defaultErrorMsg));
+  }
+  return(response.json());
+});
