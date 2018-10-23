@@ -58,6 +58,21 @@ export interface IRegisterFailedAction extends IFluxStandardAction {
   payload: {},
 }
 
+export interface IActivateAccountAction extends IFluxStandardAction {
+  payload: {
+    email: string,
+    token: string,
+  },
+}
+
+export interface IActivatingAccountAction extends IFluxStandardAction {
+  payload: {},
+}
+
+export interface IActivatedAccountAction extends IFluxStandardAction {
+  payload: {},
+}
+
 export interface IShowLogInAction extends IFluxStandardAction {
   payload: {},
 }
