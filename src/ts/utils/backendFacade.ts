@@ -40,3 +40,17 @@ export const login = (
   }
   return(response.json());
 });
+
+export const logOut = (): Promise<boolean> => fetch(
+  `${apiBaseUrl}logout/`,
+  {
+    ...baseRequestPayload,
+    method: 'GET',
+  }
+)
+.then(response => {
+  if (!response.ok) {
+    return(Promise.reject(defaultErrorMsg));
+  }
+  return(Promise.resolve(true));
+});
