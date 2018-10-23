@@ -24,6 +24,7 @@ const handleLogIn = (store: Store<IState, IFluxStandardAction>) =>
       })
       .catch(error => {
         store.dispatch(logInFailed());
+        store.dispatch(showLogIn());
       });
     }
     return;
