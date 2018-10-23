@@ -1,5 +1,7 @@
 'use strict';
 
+export const HOME = 'HOME';
+
 export const LOG_IN = 'LOG_IN';
 export const LOGGING_IN = 'LOGGING_IN';
 export const LOGGED_IN = 'LOGGED_IN';
