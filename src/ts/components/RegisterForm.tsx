@@ -1,6 +1,12 @@
 'use strict';
 import * as React from 'react';
 
+export interface IProps {
+  handleSubmit: (
+    args: { email: string, password: string, name: string }
+  ) => void,
+}
+
 export interface IState {
   email: string,
   password: string,
@@ -8,8 +14,8 @@ export interface IState {
   name: string,
 }
 
-export default class RegisterForm extends React.Component<{}, IState> {
-  constructor(props: {}) {
+export default class RegisterForm extends React.Component<IProps, IState> {
+  constructor(props: IProps) {
     super(props);
 
     this.state = {
