@@ -8,11 +8,19 @@ export interface IProps {
 
 export default class Header extends React.Component<IProps, {}> {
   render() {
+    const links: (JSX.Element | string)[] = [];
+
+    if (this.props.userLoggedIn) {
+      links.push(<Link key='logout' to='/logout'>Logout</Link>);
+    } else {
+      links.push(<Link key='login' to='/login'>Login</Link>);
+      links.push(' | ');
+      links.push(<Link key='register' to='/register'>Register</Link>);
+    }
+
     return(
       <div id='header'>
-        <div id='account-links'>
-          <Link to='/login'>Login</Link> | <Link to='/register'>Register</Link>
-        </div>
+        <div id='account-links'>{ links }</div>
       </div>
     );
   }
