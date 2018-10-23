@@ -2,7 +2,11 @@
 import * as React from 'react';
 import Link from 'redux-first-router-link';
 
-export default class Header extends React.Component<{}, {}> {
+export interface IProps {
+  userLoggedIn: boolean,
+}
+
+export default class Header extends React.Component<IProps, {}> {
   render() {
     return(
       <div id='header'>
