@@ -25,3 +25,7 @@ export interface ILoggedInAction extends IFluxStandardAction {
 export interface ILogInFailedAction extends IFluxStandardAction {
   payload: {},
 }
+
+export interface IShowLogInAction extends IFluxStandardAction {
+  payload: {},
+}
