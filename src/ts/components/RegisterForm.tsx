@@ -31,6 +31,8 @@ export default class RegisterForm extends React.Component<IProps, IState> {
 
   public handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
+    if (this.state.password !== this.state.confPassword) { return; }
+    this.props.handleSubmit(this.state);
     return;
   }
 
