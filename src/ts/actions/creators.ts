@@ -89,3 +89,10 @@ export function showLogIn(): ActionInterfaces.IShowLogInAction {
     payload: {},
   });
 }
+
+export function showRegister(): ActionInterfaces.IShowRegisterAction {
+  return({
+    type: ActionTypes.SHOW_REGISTER,
+    payload: {},
+  });
+}
