@@ -17,3 +17,10 @@ export function loggingIn(): ActionInterfaces.ILogginInAction {
     payload: {},
   });
 }
+
+export function loggedIn(): ActionInterfaces.ILoggedInAction {
+  return({
+    type: ActionTypes.LOGGIN_IN,
+    payload: {},
+  });
+}
