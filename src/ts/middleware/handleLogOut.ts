@@ -15,7 +15,7 @@ const handleLogOut = (store: Store<IState, IFluxStandardAction>) =>
       logOut()
       .then(() => {
         store.dispatch(loggedOut());
-        store.dispatch(showLogIn());
+        store.dispatch(home());
       })
       .catch(error => {
         console.log(error.message);
