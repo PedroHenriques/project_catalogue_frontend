@@ -14,5 +14,12 @@ export default class LoginForm extends React.Component<{}, ILoginFormState> {
       email: '',
       password: '',
     };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  public handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
+    event.preventDefault();
+    return;
   }
 }
