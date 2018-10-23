@@ -25,6 +25,7 @@ export default class LoginForm extends React.Component<IProps, IState> {
 
   public handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
+    this.props.handleSubmit({ ...this.state });
     return;
   }
 
