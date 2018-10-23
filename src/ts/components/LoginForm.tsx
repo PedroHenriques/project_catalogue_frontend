@@ -50,7 +50,8 @@ export default class LoginForm extends React.Component<IProps, IState> {
         <form onSubmit={this.handleSubmit}>
           <p><input type='email' id='login-email' placeholder='Email'
             value={this.state.email} onChange={this.handleChange} /></p>
-          <p><input type='password' id='login-pw' placeholder='Password' /></p>
+          <p><input type='password' id='login-pw' placeholder='Password'
+            value={this.state.password} onChange={this.handleChange} /></p>
           <p><button type='submit'>Log In</button></p>
         </form>
       </div>
