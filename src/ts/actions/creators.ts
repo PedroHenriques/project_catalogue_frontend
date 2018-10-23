@@ -13,7 +13,7 @@ export function authenticate(
 
 export function loggingIn(): ActionInterfaces.ILogginInAction {
   return({
-    type: ActionTypes.LOGGIN_IN,
+    type: ActionTypes.LOGGING_IN,
     payload: {},
   });
 }
