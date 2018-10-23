@@ -9,6 +9,7 @@ const routesMap = {
   [ActionTypes.LOG_OUT]: '/logout',
   [ActionTypes.SHOW_LOG_IN]: '/login',
   [ActionTypes.SHOW_REGISTER]: '/register',
+  [ActionTypes.ACTIVATE_ACCOUNT]: '/activation',
 };
 
 const history = createBrowserHistory();
