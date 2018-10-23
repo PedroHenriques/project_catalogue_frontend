@@ -16,3 +16,4 @@ export const REGISTERED = 'REGISTERED';
 export const REGISTER_FAILED = 'REGISTER_FAILED';
 
 export const SHOW_LOG_IN = 'SHOW_LOG_IN';
+export const SHOW_REGISTER = 'SHOW_REGISTER';
