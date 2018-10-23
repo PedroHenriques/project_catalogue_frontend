@@ -11,6 +11,7 @@ const handleLogIn = (store: Store<IState, IFluxStandardAction>) =>
 
     const state = store.getState();
     if (!state.user.isLoggedIn && !state.user.isLoggingIn) {
+      store.dispatch(loggingIn());
       login({
         email: (action as ILogInAction).payload.email,
         password: (action as ILogInAction).payload.password,
