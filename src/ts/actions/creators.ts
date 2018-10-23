@@ -32,6 +32,13 @@ export function logInFailed(): ActionInterfaces.ILogInFailedAction {
   });
 }
 
+export function logOut(): ActionInterfaces.ILogOutAction {
+  return({
+    type: ActionTypes.LOG_OUT,
+    payload: {},
+  });
+}
+
 export function showLogIn(): ActionInterfaces.IShowLogInAction {
   return({
     type: ActionTypes.SHOW_LOG_IN,
