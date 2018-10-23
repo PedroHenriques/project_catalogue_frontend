@@ -76,6 +76,13 @@ export function registered(): ActionInterfaces.IRegisteredAction {
   });
 }
 
+export function registerFailed(): ActionInterfaces.IRegisterFailedAction {
+  return({
+    type: ActionTypes.REGISTER_FAILED,
+    payload: {},
+  });
+}
+
 export function showLogIn(): ActionInterfaces.IShowLogInAction {
   return({
     type: ActionTypes.SHOW_LOG_IN,
