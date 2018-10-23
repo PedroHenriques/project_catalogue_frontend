@@ -38,6 +38,14 @@ export interface ILoggedOutAction extends IFluxStandardAction {
   payload: {},
 }
 
+export interface IRegisterAction extends IFluxStandardAction {
+  payload: {
+    email: string,
+    password: string,
+    name: string,
+  },
+}
+
 export interface IShowLogInAction extends IFluxStandardAction {
   payload: {},
 }
