@@ -11,3 +11,10 @@ if (process.env.NODE_ENV === 'development') {
 }
 const defaultErrorMsg: string = 'An error occured while processing your ' +
   'request. Please try again.';
+
+const baseRequestPayload: IBaseRequestPayload = {
+  headers: {
+    'Content-Type': 'application/json; charset=utf-8',
+  },
+  credentials: 'include',
+};
