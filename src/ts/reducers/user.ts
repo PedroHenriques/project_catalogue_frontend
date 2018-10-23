@@ -15,7 +15,8 @@ const initialState: IUser = {
 
 export default function user(
   state: IUser = initialState,
-  action: ILoggingInAction | ILoggedInAction | ILogInFailedAction
+  action: ILoggingInAction | ILoggedInAction | ILogInFailedAction |
+    ILoggedOutAction
 ): IUser {
   switch (action.type) {
     case LOGGING_IN:
