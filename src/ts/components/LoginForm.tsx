@@ -39,4 +39,17 @@ export default class LoginForm extends React.Component<{}, ILoginFormState> {
     }
     return;
   }
+
+  render() {
+    return(
+      <div id='login-form'>
+        <form onSubmit={this.handleSubmit}>
+          <p><input type='email' id='login-email' placeholder='Email'
+            value={this.state.email} onChange={this.handleChange} /></p>
+          <p><input type='password' id='login-pw' placeholder='Password' /></p>
+          <p><button type='submit'>Log In</button></p>
+        </form>
+      </div>
+    );
+  }
 }
