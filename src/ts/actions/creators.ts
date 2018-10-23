@@ -62,6 +62,13 @@ export function register(
   });
 }
 
+export function registering(): ActionInterfaces.IRegisteringAction {
+  return({
+    type: ActionTypes.REGISTERING,
+    payload: {},
+  });
+}
+
 export function showLogIn(): ActionInterfaces.IShowLogInAction {
   return({
     type: ActionTypes.SHOW_LOG_IN,
