@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+* {
+  margin: 0px 0px;
+
+  font-family: "Roboto", Arial, sans-serif;
+
+  text-rendering: optimizeLegibility;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+#app {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  min-width: 400px;
+  min-height: 400px;
+  font-size: 14px;
+  color: black;
+
+  overflow-y: auto;
+  z-index: 0;
+}
