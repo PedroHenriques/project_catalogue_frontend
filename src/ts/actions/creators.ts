@@ -20,7 +20,7 @@ export function loggingIn(): ActionInterfaces.ILogginInAction {
 
 export function loggedIn(): ActionInterfaces.ILoggedInAction {
   return({
-    type: ActionTypes.LOGGIN_IN,
+    type: ActionTypes.LOGGED_IN,
     payload: {},
   });
 }
