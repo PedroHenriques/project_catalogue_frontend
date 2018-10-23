@@ -2,6 +2,13 @@
 import * as ActionTypes from '../actions/actionTypes';
 import * as ActionInterfaces from '../interfaces/reduxActions';
 
+export function home(): ActionInterfaces.IHomeAction {
+  return({
+    type: ActionTypes.HOME,
+    payload: {},
+  });
+}
+
 export function authenticate(
   payload: { email: string, password: string }
 ): ActionInterfaces.ILogInAction {
