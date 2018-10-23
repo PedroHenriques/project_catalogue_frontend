@@ -10,8 +10,8 @@ interface IState {
   password: string,
 }
 
-export default class LoginForm extends React.Component<{}, IState> {
-  constructor(props: {}) {
+export default class LoginForm extends React.Component<IProps, IState> {
+  constructor(props: IProps) {
     super(props);
 
     this.state = {
