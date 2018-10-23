@@ -1,7 +1,14 @@
 'use strict';
 import * as React from 'react';
 
-export default class RegisterForm extends React.Component<{}, {}> {
+export interface IState {
+  email: string,
+  password: string,
+  confPassword: string,
+  name: string,
+}
+
+export default class RegisterForm extends React.Component<{}, IState> {
   constructor(props: {}) {
     super(props);
 
