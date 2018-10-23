@@ -12,6 +12,13 @@ export default class RegisterForm extends React.Component<{}, IState> {
   constructor(props: {}) {
     super(props);
 
+    this.state = {
+      email: '',
+      password: '',
+      confPassword: '',
+      name: '',
+    };
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
