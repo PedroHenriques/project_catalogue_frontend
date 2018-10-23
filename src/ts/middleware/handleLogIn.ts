@@ -1,6 +1,9 @@
 'use strict';
 import { Dispatch, Store } from 'redux';
 import { LOG_IN } from '../actions/actionTypes';
+import {
+  loggingIn, loggedIn, logInFailed, showLogIn
+} from '../actions/creators';
 import { login } from '../utils/backendFacade';
 import { IState } from '../interfaces/redux';
 import { IFluxStandardAction, ILogInAction } from '../interfaces/reduxActions';
