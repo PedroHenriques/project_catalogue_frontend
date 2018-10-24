@@ -80,3 +80,7 @@ export interface IShowLogInAction extends IFluxStandardAction {
 export interface IShowRegisterAction extends IFluxStandardAction {
   payload: {},
 }
+
+export interface IShowLostPwAction extends IFluxStandardAction {
+  payload: {},
+}
