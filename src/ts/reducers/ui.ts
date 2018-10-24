@@ -1,10 +1,11 @@
 'use strict';
 import {
-  HOME, SHOW_LOG_IN, SHOW_REGISTER, LOGGED_IN
+  HOME, SHOW_LOG_IN, SHOW_REGISTER, LOGGED_IN, SHOW_LOST_PW
 } from '../actions/actionTypes';
 import { IUi } from '../interfaces/redux';
 import {
-  IHomeAction, IShowLogInAction, IShowRegisterAction, ILoggedInAction
+  IHomeAction, IShowLogInAction, IShowRegisterAction, ILoggedInAction,
+  IShowLostPwAction
 } from '../interfaces/reduxActions';
 
 const initialState: IUi = {
