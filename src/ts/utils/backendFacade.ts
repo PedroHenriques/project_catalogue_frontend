@@ -1,4 +1,5 @@
 'use strict';
+import { IPropertyBackend } from '../interfaces/redux';
 
 interface IBaseRequestPayload {
   headers: { [key: string]: string },
