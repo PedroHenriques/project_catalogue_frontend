@@ -3,9 +3,10 @@ import * as React from 'react';
 import LoginForm from '../containers/LoginForm';
 import RegisterForm from '../containers/RegisterForm';
 import LostPassword from '../containers/LostPassword';
+import ResetPassword from '../containers/ResetPassword';
 
 export interface IProps {
-  componentToRender: 'home' | 'login' | 'register' | 'lostPw',
+  componentToRender: 'home' | 'login' | 'register' | 'lostPw' | 'resetPw',
 }
 
 export default class Main extends React.Component<IProps, {}> {
@@ -26,6 +27,10 @@ export default class Main extends React.Component<IProps, {}> {
 
       case 'lostPw':
         child = <LostPassword />;
+        break;
+
+      case 'resetPw':
+        child = <ResetPassword />;
         break;
 
       default:
