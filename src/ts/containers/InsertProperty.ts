@@ -12,7 +12,7 @@ interface IMapStateToProps {
 interface IMapDispatchToProps {
   insertProperty: (args: {
     title: string, numberOfBeds: string, address: string, geoLocation: string,
-    description?: string, typeId: string, countryId: string,
+    description: string, typeId: string, countryId: string,
   }) => void,
 }
 
