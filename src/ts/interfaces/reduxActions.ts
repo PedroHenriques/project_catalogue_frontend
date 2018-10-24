@@ -79,6 +79,14 @@ export interface IRequestPwResetAction extends IFluxStandardAction {
   },
 }
 
+export interface IResetPwAction extends IFluxStandardAction {
+  payload: {
+    email: string,
+    token: string,
+    password: string,
+  },
+}
+
 export interface IShowLogInAction extends IFluxStandardAction {
   payload: {},
 }
