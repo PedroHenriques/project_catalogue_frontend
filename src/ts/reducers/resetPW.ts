@@ -3,7 +3,7 @@ import { SHOW_RESET_PW } from '../actions/actionTypes';
 import { IResetPw } from '../interfaces/redux';
 import { IShowResetPwAction } from '../interfaces/reduxActions';
 
-const initialState: IResetPw | null = null;
+const initialState: null = null;
 
 export default function resetPW(
   state: IResetPw | null = initialState,
@@ -17,6 +17,6 @@ export default function resetPW(
       });
 
     default:
-      return(state);
+      return(initialState);
   }
 }
