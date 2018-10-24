@@ -14,34 +14,34 @@ export interface IProps {
 
 export default class Main extends React.Component<IProps, {}> {
   render() {
-    let child: JSX.Element | null;
+    const child: JSX.Element[] = [];
     switch (this.props.componentToRender) {
       case 'home':
-        child = <PropertyList />;
+        child.push(<div id='map' key='map'></div>);
+        child.push(<PropertyList key='propertyList' />);
         break;
 
       case 'login':
-        child = <LoginForm />;
+        child.push(<LoginForm key='LoginForm' />);
         break;
 
       case 'register':
-        child = <RegisterForm />;
+        child.push(<RegisterForm key='RegisterForm' />);
         break;
 
       case 'lostPw':
-        child = <LostPassword />;
+        child.push(<LostPassword key='LostPassword' />);
         break;
 
       case 'resetPw':
-        child = <ResetPassword />;
+        child.push(<ResetPassword key='ResetPassword' />);
         break;
 
       case 'insertProperty':
-        child = <InsertProperty />;
+        child.push(<InsertProperty key='InsertProperty' />);
         break;
 
       default:
-        child = null;
         break;
     }
 
