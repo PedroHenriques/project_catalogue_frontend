@@ -24,6 +24,9 @@ export const RESET_PW = 'RESET_PW';
 
 export const INSERT_PROPERTY = 'INSERT_PROPERTY';
 
+export const GET_ALL_PROPERTIES = 'GET_ALL_PROPERTIES';
+export const GOT_PROPERTIES = 'GOT_PROPERTIES';
+
 export const SHOW_LOG_IN = 'SHOW_LOG_IN';
 export const SHOW_REGISTER = 'SHOW_REGISTER';
 export const SHOW_LOST_PW = 'SHOW_LOST_PW';
