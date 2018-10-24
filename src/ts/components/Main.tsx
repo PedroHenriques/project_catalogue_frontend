@@ -2,6 +2,7 @@
 import * as React from 'react';
 import LoginForm from '../containers/LoginForm';
 import RegisterForm from '../containers/RegisterForm';
+import LostPassword from '../containers/LostPassword';
 
 export interface IProps {
   componentToRender: 'home' | 'login' | 'register' | 'lostPw',
