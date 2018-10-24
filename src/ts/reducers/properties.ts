@@ -11,10 +11,15 @@ export default function properties(
 ): IProperties | null {
   switch (action.type) {
     case GOT_PROPERTIES:
-      return({
-        ids: (action as IGotPropertiesAction).payload.properties.ids,
-        data: (action as IGotPropertiesAction).payload.properties.data,
-      });
+      const propertyData = (action as IGotPropertiesAction).payload.properties;
+      if (propertyData !== null) {
+        return({
+          ids: propertyData.ids,
+          data: propertyData.data,
+        });
+      } else {
+        return(null);
+      }
 
     default:
       return(state);
