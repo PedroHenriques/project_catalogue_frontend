@@ -106,6 +106,15 @@ export function activatedAccount(): ActionInterfaces.IActivatedAccountAction {
   });
 }
 
+export function requestPwReset(
+  payload: { email: string, }
+): ActionInterfaces.IRequestPwResetAction {
+  return({
+    type: ActionTypes.REQUEST_PW_RESET,
+    payload,
+  });
+}
+
 export function showLogIn(): ActionInterfaces.IShowLogInAction {
   return({
     type: ActionTypes.SHOW_LOG_IN,
