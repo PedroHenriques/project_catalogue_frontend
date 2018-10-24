@@ -39,6 +39,40 @@ export default class InsertProperty extends React.Component<IProps, IState> {
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement |
       HTMLSelectElement>
   ): void {
+    switch (event.currentTarget.id) {
+      case 'insert-title':
+        this.setState({ title: event.currentTarget.value });
+        break;
+
+      case 'insert-num-beds':
+        this.setState({
+          numberOfBeds: parseInt(event.currentTarget.value, 10),
+        });
+        break;
+
+      case 'insert-address':
+        this.setState({ address: event.currentTarget.value });
+        break;
+
+      case 'insert-geolocation':
+        this.setState({ geoLocation: event.currentTarget.value });
+        break;
+
+      case 'insert-description':
+        this.setState({ description: event.currentTarget.value });
+        break;
+
+      case 'insert-type':
+        this.setState({ typeId: event.currentTarget.value });
+        break;
+
+      case 'insert-country':
+        this.setState({ countryId: event.currentTarget.value });
+        break;
+
+      default:
+        break;
+    }
     return;
   }
 
