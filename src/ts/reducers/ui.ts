@@ -11,6 +11,7 @@ const initialState: IUi = {
   showHome: true,
   showLogin: false,
   showRegister: false,
+  showLostPw: false,
 };
 
 export default function ui(
