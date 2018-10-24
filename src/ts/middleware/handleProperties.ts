@@ -15,21 +15,19 @@ const handleProperties = (store: Store<IState, IFluxStandardAction>) =>
     }
 
     const state = store.getState();
-    if (state.user.isLoggedIn) {
-      getAllProperties()
-      .then(properties => {
-        const normalizedProperties = normalize(properties, propertiesSchema);
-        store.dispatch(gotProperties({
-          properties: {
-            ids: normalizedProperties.result,
-            data: normalizedProperties.entities.properties,
-          },
-        }));
-      })
-      .catch(error => {
-        window.alert(error);
-      });
-    }
+    getAllProperties()
+    .then(properties => {
+      const normalizedProperties = normalize(properties, propertiesSchema);
+      store.dispatch(gotProperties({
+        properties: {
+          ids: normalizedProperties.result,
+          data: normalizedProperties.entities.properties,
+        },
+      }));
+    })
+    .catch(error => {
+      window.alert(error);
+    });
 
     if (action.type === HOME) { return(next(action)); }
     return;
