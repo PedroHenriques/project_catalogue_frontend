@@ -124,6 +124,18 @@ export function resetPw(
   });
 }
 
+export function insertProperty(
+  payload: {
+    title: string, numberOfBeds: string, address: string, countryId: string,
+    geoLocation: string, description?: string, typeId: string,
+  }
+): ActionInterfaces.IInsertProperty {
+  return({
+    type: ActionTypes.INSERT_PROPERTY,
+    payload,
+  });
+}
+
 export function showLogIn(): ActionInterfaces.IShowLogInAction {
   return({
     type: ActionTypes.SHOW_LOG_IN,
