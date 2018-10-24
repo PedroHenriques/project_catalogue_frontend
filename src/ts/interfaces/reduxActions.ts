@@ -101,7 +101,7 @@ export interface IGetAllPropertiesAction extends IFluxStandardAction {
 
 export interface IGotPropertiesAction extends IFluxStandardAction {
   payload: {
-    properties: IProperties,
+    properties: IProperties | null,
   },
 }
 
