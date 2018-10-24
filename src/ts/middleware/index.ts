@@ -8,8 +8,10 @@ import handleAccountActivation from './handleAccountActivation';
 import handleResetPw from './handleResetPw';
 import handleLostPw from './handleLostPw';
 import handleInsertProperty from './handleInsertProperty';
+import handleProperties from './handleProperties';
 
 export const middleware = Redux.applyMiddleware(
   routerMiddleware, handleLogIn, handleLogOut, handleRegistration,
-  handleAccountActivation, handleLostPw, handleResetPw, handleInsertProperty
+  handleAccountActivation, handleLostPw, handleResetPw, handleInsertProperty,
+  handleProperties
 );
