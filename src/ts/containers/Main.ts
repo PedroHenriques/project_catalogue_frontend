@@ -13,20 +13,7 @@ interface IMapDispatchToProps {
 }
 
 const mapStateToProps = (state: IState): IMapStateToProps => {
-  let renderName: 'home' | 'login' | 'register' | 'lostPw' | 'resetPw';
-  if (state.resetPW !== null) {
-    renderName = 'resetPw';
-  } else if (state.ui.showLogin) {
-    renderName = 'login';
-  } else if (state.ui.showRegister) {
-    renderName = 'register';
-  } else if (state.ui.showLostPw) {
-    renderName = 'lostPw';
-  } else if (state.ui.showHome) {
-    renderName = 'home';
-  } else {
-    renderName = 'home';
-  }
+  const renderName = state.ui.pageToShow;
 
   return({
     componentToRender: renderName,
