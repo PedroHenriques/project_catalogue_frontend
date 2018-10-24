@@ -6,22 +6,24 @@ import MainComponent from '../components/Main';
 import { IState } from '../interfaces/redux';
 
 interface IMapStateToProps {
-  componentToRender: 'home' | 'login' | 'register' | 'lostPw',
+  componentToRender: 'home' | 'login' | 'register' | 'lostPw' | 'resetPw',
 }
 
 interface IMapDispatchToProps {
 }
 
 const mapStateToProps = (state: IState): IMapStateToProps => {
-  let renderName: 'home' | 'login' | 'register' | 'lostPw';
-  if (state.ui.showLogin) {
+  let renderName: 'home' | 'login' | 'register' | 'lostPw' | 'resetPw';
+  if (state.resetPW !== null) {
+    renderName = 'resetPw';
+  } else if (state.ui.showLogin) {
     renderName = 'login';
   } else if (state.ui.showRegister) {
     renderName = 'register';
-  } else if (state.ui.showHome) {
-    renderName = 'home';
   } else if (state.ui.showLostPw) {
     renderName = 'lostPw';
+  } else if (state.ui.showHome) {
+    renderName = 'home';
   } else {
     renderName = 'home';
   }
