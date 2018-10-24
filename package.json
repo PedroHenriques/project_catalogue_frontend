@@ -11,6 +11,8 @@
     "lint": "tslint -c ./tslint.json -p ./tsconfig.json",
     "start": "node server.js"
   },
+  "author": "Pedro Henriques <pedro@pedrojhenriques.com> (http://pedrojhenriques.com)",
+  "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "@types/googlemaps": "^3.30.16",
