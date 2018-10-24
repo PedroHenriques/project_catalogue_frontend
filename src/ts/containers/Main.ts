@@ -6,7 +6,8 @@ import MainComponent from '../components/Main';
 import { IState } from '../interfaces/redux';
 
 interface IMapStateToProps {
-  componentToRender: 'home' | 'login' | 'register' | 'lostPw' | 'resetPw',
+  componentToRender: 'home' | 'login' | 'register' | 'lostPw' | 'resetPw' |
+    'insertProperty',
 }
 
 interface IMapDispatchToProps {
