@@ -4,7 +4,7 @@ import LoginForm from '../containers/LoginForm';
 import RegisterForm from '../containers/RegisterForm';
 import LostPassword from '../containers/LostPassword';
 import ResetPassword from '../containers/ResetPassword';
-import InsertProperty from './InsertProperty';
+import InsertProperty from '../containers/InsertProperty';
 
 export interface IProps {
   componentToRender: 'home' | 'login' | 'register' | 'lostPw' | 'resetPw' |
