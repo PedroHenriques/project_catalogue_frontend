@@ -156,3 +156,10 @@ export function showResetPw(
     payload: {},
   });
 }
+
+export function showInsertProperty(): ActionInterfaces.IShowInsertProperty {
+  return({
+    type: ActionTypes.SHOW_INSERT_PROPERTY,
+    payload: {},
+  });
+}
