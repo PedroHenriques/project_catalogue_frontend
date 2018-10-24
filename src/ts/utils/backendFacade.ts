@@ -97,3 +97,22 @@ export const activateAccount = (
   }
   return(response.json());
 });
+
+export const requestPwReset = (
+  args: { email: string }
+): Promise<void> => fetch(
+  `${apiBaseUrl}users/lostPw/`,
+  {
+    ...baseRequestPayload,
+    method: 'POST',
+    body: JSON.stringify({
+      email: args.email,
+    }),
+  }
+)
+.then(response => {
+  if (!response.ok) {
+    return(Promise.reject(defaultErrorMsg));
+  }
+  return(response.json());
+});
