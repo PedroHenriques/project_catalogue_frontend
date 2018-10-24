@@ -16,4 +16,5 @@ export interface IUi {
   showHome: boolean,
   showLogin: boolean,
   showRegister: boolean,
+  showLostPw: boolean,
 }
