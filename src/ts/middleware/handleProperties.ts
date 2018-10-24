@@ -30,6 +30,8 @@ const handleProperties = (store: Store<IState, IFluxStandardAction>) =>
         window.alert(error);
       });
     }
+
+    if (action.type === HOME) { return(next(action)); }
     return;
   };
 
