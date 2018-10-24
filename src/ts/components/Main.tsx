@@ -5,6 +5,7 @@ import RegisterForm from '../containers/RegisterForm';
 import LostPassword from '../containers/LostPassword';
 import ResetPassword from '../containers/ResetPassword';
 import InsertProperty from '../containers/InsertProperty';
+import PropertyList from '../containers/PropertyList';
 
 export interface IProps {
   componentToRender: 'home' | 'login' | 'register' | 'lostPw' | 'resetPw' |
@@ -16,7 +17,7 @@ export default class Main extends React.Component<IProps, {}> {
     let child: JSX.Element | null;
     switch (this.props.componentToRender) {
       case 'home':
-        child = <p>Property list goes here</p>;
+        child = <PropertyList />;
         break;
 
       case 'login':
