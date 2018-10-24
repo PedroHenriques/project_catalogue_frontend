@@ -15,7 +15,7 @@ export default class Header extends React.Component<IProps, {}> {
     if (this.props.userLoggedIn) {
       links.push(' | ');
       links.push(
-        <Link key='insertProperty' to='/insertProperty'>Add Property</Link>
+        <Link key='addProperty' to='/addProperty'>Add Property</Link>
       );
       links.push(' | ');
       links.push(<Link key='logout' to='/logout'>Logout</Link>);
