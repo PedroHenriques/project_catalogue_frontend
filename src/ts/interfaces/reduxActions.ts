@@ -90,3 +90,13 @@ export interface IShowRegisterAction extends IFluxStandardAction {
 export interface IShowLostPwAction extends IFluxStandardAction {
   payload: {},
 }
+
+export interface IShowResetPwAction extends IFluxStandardAction {
+  meta: {
+    query: {
+      email: string,
+      token: string,
+    },
+  },
+  payload: {},
+}
