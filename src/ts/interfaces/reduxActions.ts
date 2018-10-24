@@ -73,6 +73,12 @@ export interface IActivatedAccountAction extends IFluxStandardAction {
   payload: {},
 }
 
+export interface IRequestPwResetAction extends IFluxStandardAction {
+  payload: {
+    email: string,
+  },
+}
+
 export interface IShowLogInAction extends IFluxStandardAction {
   payload: {},
 }
