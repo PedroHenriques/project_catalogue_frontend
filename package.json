@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
+    "@types/googlemaps": "^3.30.16",
     "@types/history": "^4.7.2",
     "@types/react": "^16.4.18",
     "@types/react-dom": "^16.0.9",
