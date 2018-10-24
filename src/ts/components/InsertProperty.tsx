@@ -37,6 +37,16 @@ export default class InsertProperty extends React.Component<IProps, IState> {
 
   public handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
+    if (this.state.numberOfBeds === undefined) { return; }
+    this.props.insertProperty({
+      title: this.state.title,
+      numberOfBeds: `${this.state.numberOfBeds}`,
+      address: this.state.address,
+      geoLocation: this.state.geoLocation,
+      description: this.state.description,
+      typeId: this.state.typeId,
+      countryId: this.state.countryId,
+    });
     return;
   }
 
