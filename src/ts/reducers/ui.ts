@@ -5,7 +5,7 @@ import {
 import { IUi } from '../interfaces/redux';
 import {
   IHomeAction, IShowLogInAction, IShowRegisterAction, IShowLostPwAction,
-  IShowInsertProperty
+  IShowInsertPropertyAction
 } from '../interfaces/reduxActions';
 
 const initialState: IUi = {
@@ -15,7 +15,7 @@ const initialState: IUi = {
 export default function ui(
   state: IUi = initialState,
   action: IHomeAction | IShowLogInAction | IShowRegisterAction |
-    IShowLostPwAction | IShowInsertProperty
+    IShowLostPwAction | IShowInsertPropertyAction
 ): IUi {
   switch (action.type) {
     case HOME:

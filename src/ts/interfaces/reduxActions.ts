@@ -116,6 +116,6 @@ export interface IShowResetPwAction extends IFluxStandardAction {
   payload: {},
 }
 
-export interface IShowInsertProperty extends IFluxStandardAction {
+export interface IShowInsertPropertyAction extends IFluxStandardAction {
   payload: {},
 }

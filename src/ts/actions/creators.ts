@@ -169,7 +169,8 @@ export function showResetPw(
   });
 }
 
-export function showInsertProperty(): ActionInterfaces.IShowInsertProperty {
+export function showInsertProperty(
+): ActionInterfaces.IShowInsertPropertyAction {
   return({
     type: ActionTypes.SHOW_INSERT_PROPERTY,
     payload: {},
