@@ -1,10 +1,11 @@
 'use strict';
 import {
-  HOME, SHOW_LOG_IN, SHOW_REGISTER, SHOW_LOST_PW
+  HOME, SHOW_LOG_IN, SHOW_REGISTER, SHOW_LOST_PW, SHOW_INSERT_PROPERTY
 } from '../actions/actionTypes';
 import { IUi } from '../interfaces/redux';
 import {
-  IHomeAction, IShowLogInAction, IShowRegisterAction, IShowLostPwAction
+  IHomeAction, IShowLogInAction, IShowRegisterAction, IShowLostPwAction,
+  IShowInsertProperty
 } from '../interfaces/reduxActions';
 
 const initialState: IUi = {
@@ -14,7 +15,7 @@ const initialState: IUi = {
 export default function ui(
   state: IUi = initialState,
   action: IHomeAction | IShowLogInAction | IShowRegisterAction |
-    IShowLostPwAction
+    IShowLostPwAction | IShowInsertProperty
 ): IUi {
   switch (action.type) {
     case HOME:
@@ -35,6 +36,11 @@ export default function ui(
     case SHOW_LOST_PW:
       return({
         pageToShow: 'lostPw',
+      });
+
+    case SHOW_INSERT_PROPERTY:
+      return({
+        pageToShow: 'insertProperty',
       });
 
     default:
