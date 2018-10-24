@@ -1,5 +1,6 @@
 'use strict';
 import * as React from 'react';
+import Link from 'redux-first-router-link';
 
 export interface IProps {
   handleSubmit: (args: { email: string, password: string }) => void,
@@ -53,6 +54,7 @@ export default class LoginForm extends React.Component<IProps, IState> {
             value={this.state.email} onChange={this.handleChange} /></p>
           <p><input type='password' id='login-pw' placeholder='Password'
             value={this.state.password} onChange={this.handleChange} /></p>
+            <p><Link to='/lostPassword'>Lost Password</Link></p>
           <p><button type='submit'>Log In</button></p>
         </form>
       </div>
