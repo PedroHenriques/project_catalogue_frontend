@@ -8,10 +8,7 @@ import {
 } from '../interfaces/reduxActions';
 
 const initialState: IUi = {
-  showHome: true,
-  showLogin: false,
-  showRegister: false,
-  showLostPw: false,
+  pageToShow: 'home',
 };
 
 export default function ui(
