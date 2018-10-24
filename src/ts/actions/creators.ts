@@ -1,6 +1,7 @@
 'use strict';
 import * as ActionTypes from '../actions/actionTypes';
 import * as ActionInterfaces from '../interfaces/reduxActions';
+import { IProperties } from '../interfaces/redux';
 
 export function home(): ActionInterfaces.IHomeAction {
   return({
@@ -132,6 +133,22 @@ export function insertProperty(
 ): ActionInterfaces.IInsertPropertyAction {
   return({
     type: ActionTypes.INSERT_PROPERTY,
+    payload,
+  });
+}
+
+export function getAllProperties(): ActionInterfaces.IGetAllPropertiesAction {
+  return({
+    type: ActionTypes.GET_ALL_PROPERTIES,
+    payload: {},
+  });
+}
+
+export function gotProperties(
+  payload: { properties: IProperties }
+): ActionInterfaces.IGotPropertiesAction {
+  return({
+    type: ActionTypes.GOT_PROPERTIES,
     payload,
   });
 }
