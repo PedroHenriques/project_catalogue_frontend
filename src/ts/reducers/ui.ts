@@ -19,34 +19,22 @@ export default function ui(
   switch (action.type) {
     case HOME:
       return({
-        showHome: true,
-        showLogin: false,
-        showRegister: false,
-        showLostPw: false,
+        pageToShow: 'home',
       });
 
     case SHOW_LOG_IN:
       return({
-        showHome: false,
-        showLogin: true,
-        showRegister: false,
-        showLostPw: false,
+        pageToShow: 'login',
       });
 
     case SHOW_REGISTER:
       return({
-        showHome: false,
-        showLogin: false,
-        showRegister: true,
-        showLostPw: false,
+        pageToShow: 'register',
       });
 
     case SHOW_LOST_PW:
       return({
-        showHome: false,
-        showLogin: false,
-        showRegister: false,
-        showLostPw: true,
+        pageToShow: 'lostPw',
       });
 
     default:
