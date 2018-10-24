@@ -14,10 +14,8 @@ export interface IUser {
 }
 
 export interface IUi {
-  showHome: boolean,
-  showLogin: boolean,
-  showRegister: boolean,
-  showLostPw: boolean,
+  pageToShow: 'home' | 'login' | 'register' | 'lostPw' | 'resetPw' |
+    'insertProperty',
 }
 
 export interface IResetPw {
