@@ -115,6 +115,15 @@ export function requestPwReset(
   });
 }
 
+export function resetPw(
+  payload: { email: string, token: string, password: string }
+): ActionInterfaces.IResetPwAction {
+  return({
+    type: ActionTypes.RESET_PW,
+    payload,
+  });
+}
+
 export function showLogIn(): ActionInterfaces.IShowLogInAction {
   return({
     type: ActionTypes.SHOW_LOG_IN,
