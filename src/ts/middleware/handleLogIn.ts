@@ -2,7 +2,7 @@
 import { Dispatch, Store } from 'redux';
 import { LOG_IN } from '../actions/actionTypes';
 import {
-  loggingIn, loggedIn, logInFailed, showLogIn
+  loggingIn, loggedIn, logInFailed, showLogIn, home
 } from '../actions/creators';
 import { login } from '../utils/backendFacade';
 import { IState } from '../interfaces/redux';
@@ -21,6 +21,7 @@ const handleLogIn = (store: Store<IState, IFluxStandardAction>) =>
       })
       .then(() => {
         store.dispatch(loggedIn());
+        store.dispatch(home());
       })
       .catch(error => {
         store.dispatch(logInFailed());
