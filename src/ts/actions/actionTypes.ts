@@ -21,3 +21,4 @@ export const ACTIVATED_ACCOUNT = 'ACTIVATED_ACCOUNT';
 
 export const SHOW_LOG_IN = 'SHOW_LOG_IN';
 export const SHOW_REGISTER = 'SHOW_REGISTER';
+export const SHOW_LOST_PW = 'SHOW_LOST_PW';
