@@ -135,3 +135,15 @@ export function showLostPw(): ActionInterfaces.IShowLostPwAction {
     payload: {},
   });
 }
+
+export function showResetPw(
+  payload: { email: string, token: string }
+): ActionInterfaces.IShowResetPwAction {
+  return({
+    type: ActionTypes.SHOW_RESET_PW,
+    meta: {
+      query: payload
+    },
+    payload: {},
+  });
+}
