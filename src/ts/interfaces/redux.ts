@@ -5,6 +5,7 @@ export interface IState {
   location: LocationState,
   user: IUser,
   ui: IUi,
+  resetPW: IResetPw | null,
 }
 
 export interface IUser {
@@ -17,4 +18,9 @@ export interface IUi {
   showLogin: boolean,
   showRegister: boolean,
   showLostPw: boolean,
+}
+
+export interface IResetPw {
+  email: string,
+  token: string,
 }
