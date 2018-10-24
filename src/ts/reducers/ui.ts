@@ -17,7 +17,8 @@ const initialState: IUi = {
 
 export default function ui(
   state: IUi = initialState,
-  action: IHomeAction | IShowLogInAction | IShowRegisterAction | ILoggedInAction
+  action: IHomeAction | IShowLogInAction | IShowRegisterAction |
+    ILoggedInAction | IShowLostPwAction
 ): IUi {
   switch (action.type) {
     case HOME:
