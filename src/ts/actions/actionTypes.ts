@@ -26,3 +26,4 @@ export const SHOW_LOG_IN = 'SHOW_LOG_IN';
 export const SHOW_REGISTER = 'SHOW_REGISTER';
 export const SHOW_LOST_PW = 'SHOW_LOST_PW';
 export const SHOW_RESET_PW = 'SHOW_RESET_PW';
+export const SHOW_INSERT_PROPERTY = 'SHOW_INSERT_PROPERTY';
