@@ -137,3 +137,31 @@ export const pwReset = (
   }
   return(response.json());
 });
+
+export const insertProperty = (
+  args: {
+    title: string, numberOfBeds: string, address: string, countryId: string,
+    geoLocation: string, description: string, typeId: string,
+  }
+): Promise<void> => fetch(
+  `${apiBaseUrl}properties/`,
+  {
+    ...baseRequestPayload,
+    method: 'POST',
+    body: JSON.stringify({
+      title: args.title,
+      numberOfBeds: args.numberOfBeds,
+      address: args.address,
+      countryId: args.countryId,
+      geoLocation: args.geoLocation,
+      description: args.description,
+      typeId: args.typeId,
+    }),
+  }
+)
+.then(response => {
+  if (!response.ok) {
+    return(Promise.reject(defaultErrorMsg));
+  }
+  return(response.json());
+});
