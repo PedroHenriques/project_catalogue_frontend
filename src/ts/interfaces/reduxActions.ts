@@ -1,5 +1,6 @@
 'use strict';
 import { Action } from 'redux';
+import { IProperties } from './redux';
 
 export interface IFluxStandardAction extends Action {
   error?: boolean,
@@ -91,6 +92,16 @@ export interface IInsertPropertyAction extends IFluxStandardAction {
   payload: {
     title: string, numberOfBeds: string, address: string, countryId: string,
     geoLocation: string, description: string, typeId: string,
+  },
+}
+
+export interface IGetAllPropertiesAction extends IFluxStandardAction {
+  payload: {},
+}
+
+export interface IGotPropertiesAction extends IFluxStandardAction {
+  payload: {
+    properties: IProperties,
   },
 }
 
