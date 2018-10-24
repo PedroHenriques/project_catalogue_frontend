@@ -166,7 +166,7 @@ export const insertProperty = (
   return(response.json());
 });
 
-export const getAllProperties = (): Promise<void> => fetch(
+export const getAllProperties = (): Promise<IPropertyBackend[]> => fetch(
   `${apiBaseUrl}properties/`,
   {
     ...baseRequestPayload,
@@ -178,4 +178,5 @@ export const getAllProperties = (): Promise<void> => fetch(
     return(Promise.reject(defaultErrorMsg));
   }
   return(response.json());
-});
+})
+.then(data => data.properties as IPropertyBackend[]);
