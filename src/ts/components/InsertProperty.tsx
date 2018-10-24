@@ -5,7 +5,7 @@ export interface IProps {}
 
 export interface IState {
   title: string,
-  numberOfBeds: string | number,
+  numberOfBeds?: number,
   address: string,
   geoLocation: string,
   description: string,
@@ -19,7 +19,6 @@ export default class InsertProperty extends React.Component<IProps, IState> {
 
     this.state = {
       title: '',
-      numberOfBeds: '',
       address: '',
       geoLocation: '',
       description: '',
@@ -51,7 +50,7 @@ export default class InsertProperty extends React.Component<IProps, IState> {
             onChange={this.handleChange} value={this.state.title}
             placeholder='Title' /></p>
           <p><input type='number' id='insert-num-beds' min={1}
-            onChange={this.handleChange} value={this.state.numberOfBeds}
+            onChange={this.handleChange} value={this.state.numberOfBeds || ''}
             placeholder='Number of beds' /></p>
           <p><input type='text' id='insert-address'
             onChange={this.handleChange} value={this.state.address}
