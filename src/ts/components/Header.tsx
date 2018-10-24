@@ -9,7 +9,7 @@ export interface IProps {
 export default class Header extends React.Component<IProps, {}> {
   render() {
     const links: (JSX.Element | string)[] = [
-      <Link to='/'>Home</Link>,
+      <Link key='home' to='/'>Home</Link>,
     ];
 
     if (this.props.userLoggedIn) {
