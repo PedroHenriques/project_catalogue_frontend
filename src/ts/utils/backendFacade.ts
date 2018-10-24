@@ -116,3 +116,24 @@ export const requestPwReset = (
   }
   return(response.json());
 });
+
+export const pwReset = (
+  args: { email: string, token: string, password: string }
+): Promise<void> => fetch(
+  `${apiBaseUrl}users/pwReset/`,
+  {
+    ...baseRequestPayload,
+    method: 'POST',
+    body: JSON.stringify({
+      email: args.email,
+      token: args.token,
+      password: args.password,
+    }),
+  }
+)
+.then(response => {
+  if (!response.ok) {
+    return(Promise.reject(defaultErrorMsg));
+  }
+  return(response.json());
+});
