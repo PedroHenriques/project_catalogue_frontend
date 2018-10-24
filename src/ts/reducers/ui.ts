@@ -25,6 +25,7 @@ export default function ui(
         showHome: true,
         showLogin: false,
         showRegister: false,
+        showLostPw: false,
       });
 
     case SHOW_LOG_IN:
@@ -32,6 +33,7 @@ export default function ui(
         showHome: false,
         showLogin: true,
         showRegister: false,
+        showLostPw: false,
       });
 
     case SHOW_REGISTER:
@@ -39,6 +41,7 @@ export default function ui(
         showHome: false,
         showLogin: false,
         showRegister: true,
+        showLostPw: false,
       });
 
     default:
