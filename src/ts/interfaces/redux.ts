@@ -3,10 +3,29 @@ import { LocationState } from 'redux-first-router';
 
 export interface IState {
   location: LocationState,
+  properties: IProperties | null,
   user: IUser,
   ui: IUi,
   resetPW: IResetPw | null,
 }
+
+export interface IProperties {
+  ids: string[],
+  data: { [key: string]: IPropertyStore },
+}
+
+export interface IPropertyBackend {
+  id: number,
+  title: string,
+  numberOfBeds: number,
+  address: string,
+  geoLocation: number,
+  description: string | null,
+  propertyType: string,
+  country: string,
+}
+
+export interface IPropertyStore extends IPropertyBackend {}
 
 export interface IUser {
   isLoggedIn: boolean,
