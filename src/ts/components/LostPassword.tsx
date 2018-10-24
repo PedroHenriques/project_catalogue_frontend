@@ -1,12 +1,16 @@
 'use strict';
 import * as React from 'react';
 
+export interface IProps {
+  handleSubmit: (args: { email: string }) => void,
+}
+
 export interface IState {
   email: string,
 }
 
-export default class LostPassword extends React.Component<{}, IState> {
-  constructor(props: {}) {
+export default class LostPassword extends React.Component<IProps, IState> {
+  constructor(props: IProps) {
     super(props);
 
     this.state = {
