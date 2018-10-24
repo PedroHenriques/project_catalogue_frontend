@@ -119,3 +119,10 @@ export function showRegister(): ActionInterfaces.IShowRegisterAction {
     payload: {},
   });
 }
+
+export function showLostPw(): ActionInterfaces.IShowLostPwAction {
+  return({
+    type: ActionTypes.SHOW_LOST_PW,
+    payload: {},
+  });
+}
