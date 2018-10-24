@@ -11,6 +11,7 @@ const routesMap = {
   [ActionTypes.SHOW_REGISTER]: '/register',
   [ActionTypes.ACTIVATE_ACCOUNT]: '/activation',
   [ActionTypes.SHOW_LOST_PW]: '/lostPassword',
+  [ActionTypes.SHOW_RESET_PW]: '/pwReset',
 };
 
 const history = createBrowserHistory();
