@@ -165,3 +165,17 @@ export const insertProperty = (
   }
   return(response.json());
 });
+
+export const getAllProperties = (): Promise<void> => fetch(
+  `${apiBaseUrl}properties/`,
+  {
+    ...baseRequestPayload,
+    method: 'GET',
+  }
+)
+.then(response => {
+  if (!response.ok) {
+    return(Promise.reject(defaultErrorMsg));
+  }
+  return(response.json());
+});
