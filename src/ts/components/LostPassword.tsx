@@ -45,6 +45,7 @@ export default class LostPassword extends React.Component<IProps, IState> {
         <form onSubmit={this.handleSubmit}>
           <p><input type='email' id='lostPw-email' placeholder='Email'
             value={this.state.email} onChange={this.handleChange} /></p>
+            <p><button type='submit'>Request Password Reset</button></p>
         </form>
       </div>
     );
