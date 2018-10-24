@@ -145,7 +145,7 @@ export function getAllProperties(): ActionInterfaces.IGetAllPropertiesAction {
 }
 
 export function gotProperties(
-  payload: { properties: IProperties }
+  payload: { properties: IProperties | null }
 ): ActionInterfaces.IGotPropertiesAction {
   return({
     type: ActionTypes.GOT_PROPERTIES,
