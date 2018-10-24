@@ -87,6 +87,13 @@ export interface IResetPwAction extends IFluxStandardAction {
   },
 }
 
+export interface IInsertProperty extends IFluxStandardAction {
+  payload: {
+    title: string, numberOfBeds: string, address: string, countryId: string,
+    geoLocation: string, description?: string, typeId: string,
+  },
+}
+
 export interface IShowLogInAction extends IFluxStandardAction {
   payload: {},
 }
