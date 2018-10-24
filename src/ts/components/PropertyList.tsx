@@ -20,7 +20,8 @@ export default class PropertyList extends React.Component<IProps, {}> {
           <p><b>Address:</b> {property.address}</p>
           <p><b>Country:</b> {property.country}</p>
           <p><b>Description:</b> {property.description}</p>
-          <p><b>Geolocation:</b> {property.geoLocation}</p>
+          <p><b>Geolocation Lat:</b> {property.geoLocationLat}</p>
+          <p><b>Geolocation Long:</b> {property.geoLocationLong}</p>
         </div>
         );
       });
