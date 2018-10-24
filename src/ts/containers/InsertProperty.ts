@@ -27,7 +27,7 @@ const mapDispatchToProps = (
     insertProperty: (
       args: {
         title: string, numberOfBeds: string, address: string, countryId: string,
-        geoLocation: string, description?: string, typeId: string,
+        geoLocation: string, description: string, typeId: string,
       }
     ): void => {
       dispatch(insertProperty({ ...args }));
