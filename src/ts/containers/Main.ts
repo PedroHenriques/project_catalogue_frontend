@@ -13,12 +13,14 @@ interface IMapDispatchToProps {
 }
 
 const mapStateToProps = (state: IState): IMapStateToProps => {
-  let renderName: 'home' | 'login' | 'register' = 'home';
+  let renderName: 'home' | 'login' | 'register';
   if (state.ui.showLogin) {
     renderName = 'login';
   } else if (state.ui.showRegister) {
     renderName = 'register';
   } else if (state.ui.showHome) {
+    renderName = 'home';
+  } else {
     renderName = 'home';
   }
 
