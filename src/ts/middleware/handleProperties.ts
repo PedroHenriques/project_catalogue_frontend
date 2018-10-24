@@ -5,7 +5,7 @@ import { GET_ALL_PROPERTIES, HOME } from '../actions/actionTypes';
 import { gotProperties } from '../actions/creators';
 import { getAllProperties } from '../utils/backendFacade';
 import { propertiesSchema } from '../schemas';
-import { IState } from '../interfaces/redux';
+import { IState, IProperties } from '../interfaces/redux';
 import { IFluxStandardAction } from '../interfaces/reduxActions';
 
 const handleProperties = (store: Store<IState, IFluxStandardAction>) =>
@@ -16,14 +16,18 @@ const handleProperties = (store: Store<IState, IFluxStandardAction>) =>
 
     const state = store.getState();
     getAllProperties()
-    .then(properties => {
-      const normalizedProperties = normalize(properties, propertiesSchema);
-      store.dispatch(gotProperties({
-        properties: {
+    .then(rawProperties => {
+      let properties: IProperties | null = null;
+
+      if (rawProperties.length > 0) {
+        const normalizedProperties = normalize(rawProperties, propertiesSchema);
+        properties = {
           ids: normalizedProperties.result,
           data: normalizedProperties.entities.properties,
-        },
-      }));
+        };
+      }
+
+      store.dispatch(gotProperties({ properties }));
     })
     .catch(error => {
       window.alert(error);
