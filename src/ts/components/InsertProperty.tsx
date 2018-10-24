@@ -1,7 +1,12 @@
 'use strict';
 import * as React from 'react';
 
-export interface IProps {}
+export interface IProps {
+  insertProperty: (args: {
+    title: string, numberOfBeds: string, address: string, geoLocation: string,
+    description?: string, typeId: string, countryId: string,
+  }) => void,
+}
 
 export interface IState {
   title: string,
