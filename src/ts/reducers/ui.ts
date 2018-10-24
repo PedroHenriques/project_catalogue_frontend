@@ -46,6 +46,14 @@ export default function ui(
         showLostPw: false,
       });
 
+    case SHOW_LOST_PW:
+      return({
+        showHome: false,
+        showLogin: false,
+        showRegister: false,
+        showLostPw: true,
+      });
+
     default:
       return(state);
   }
