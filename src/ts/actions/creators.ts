@@ -129,7 +129,7 @@ export function insertProperty(
     title: string, numberOfBeds: string, address: string, countryId: string,
     geoLocation: string, description?: string, typeId: string,
   }
-): ActionInterfaces.IInsertProperty {
+): ActionInterfaces.IInsertPropertyAction {
   return({
     type: ActionTypes.INSERT_PROPERTY,
     payload,
