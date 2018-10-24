@@ -24,6 +24,10 @@ export default class Main extends React.Component<IProps, {}> {
         child = <RegisterForm />;
         break;
 
+      case 'lostPw':
+        child = <LostPassword />;
+        break;
+
       default:
         child = null;
         break;
