@@ -128,7 +128,8 @@ export function resetPw(
 export function insertProperty(
   payload: {
     title: string, numberOfBeds: string, address: string, countryId: string,
-    geoLocation: string, description: string, typeId: string,
+    geoLocationLat: string, geoLocationLong: string, description: string,
+    typeId: string,
   }
 ): ActionInterfaces.IInsertPropertyAction {
   return({
