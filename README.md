@@ -11,6 +11,11 @@
 2. In a cmd/terminal run `npm i` followed by `npm run watch`
 3. The application can be reached at `localhost:9000`
 
+**NOTE**
+
+The NPM script `watch` was created with windows in mind.  
+If you're running another OS and the script doesn't behave well, you can run `npm run build-dev -- -w` on 1 terminal window and `npm start` on another terminal window.
+
 **NOTES:**  
 
 . Add your Google Maps API key in the `src/index.template.html` file.
