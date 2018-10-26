@@ -22,6 +22,7 @@ const handleAccountActivation = (store: Store<IState, IFluxStandardAction>) =>
         token: (action as IActivateAccountAction).meta.query.token,
       })
       .then(() => {
+        window.alert('Your account is now activate.');
         store.dispatch(activatedAccount());
         store.dispatch(showLogIn());
       })
