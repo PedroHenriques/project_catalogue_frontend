@@ -11,8 +11,9 @@ interface IMapStateToProps {
 
 interface IMapDispatchToProps {
   insertProperty: (args: {
-    title: string, numberOfBeds: string, address: string, geoLocation: string,
-    description: string, typeId: string, countryId: string,
+    title: string, numberOfBeds: string, address: string,
+    geoLocationLat: string, geoLocationLong: string, description: string,
+    typeId: string, countryId: string,
   }) => void,
 }
 
@@ -27,7 +28,8 @@ const mapDispatchToProps = (
     insertProperty: (
       args: {
         title: string, numberOfBeds: string, address: string, countryId: string,
-        geoLocation: string, description: string, typeId: string,
+        geoLocationLat: string, geoLocationLong: string, description: string,
+        typeId: string,
       }
     ): void => {
       dispatch(insertProperty({ ...args }));
