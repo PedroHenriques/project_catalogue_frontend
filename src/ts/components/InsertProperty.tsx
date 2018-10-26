@@ -3,8 +3,9 @@ import * as React from 'react';
 
 export interface IProps {
   insertProperty: (args: {
-    title: string, numberOfBeds: string, address: string, geoLocation: string,
-    description: string, typeId: string, countryId: string,
+    title: string, numberOfBeds: string, address: string,
+    geoLocationLat: string, geoLocationLong: string, description: string,
+    typeId: string, countryId: string,
   }) => void,
 }
 
@@ -12,7 +13,8 @@ export interface IState {
   title: string,
   numberOfBeds?: number,
   address: string,
-  geoLocation: string,
+  geoLocationLat: string,
+  geoLocationLong: string,
   description: string,
   typeId: string,
   countryId: string,
@@ -25,7 +27,8 @@ export default class InsertProperty extends React.Component<IProps, IState> {
     this.state = {
       title: '',
       address: '',
-      geoLocation: '',
+      geoLocationLat: '',
+      geoLocationLong: '',
       description: '',
       typeId: '1',
       countryId: '1',
@@ -42,7 +45,8 @@ export default class InsertProperty extends React.Component<IProps, IState> {
       title: this.state.title,
       numberOfBeds: `${this.state.numberOfBeds}`,
       address: this.state.address,
-      geoLocation: this.state.geoLocation,
+      geoLocationLat: this.state.geoLocationLat,
+      geoLocationLong: this.state.geoLocationLong,
       description: this.state.description,
       typeId: this.state.typeId,
       countryId: this.state.countryId,
@@ -69,8 +73,12 @@ export default class InsertProperty extends React.Component<IProps, IState> {
         this.setState({ address: event.currentTarget.value });
         break;
 
-      case 'insert-geolocation':
-        this.setState({ geoLocation: event.currentTarget.value });
+      case 'insert-geolocation-lat':
+        this.setState({ geoLocationLat: event.currentTarget.value });
+        break;
+
+      case 'insert-geolocation-long':
+        this.setState({ geoLocationLong: event.currentTarget.value });
         break;
 
       case 'insert-description':
@@ -104,9 +112,12 @@ export default class InsertProperty extends React.Component<IProps, IState> {
           <p><input type='text' id='insert-address'
             onChange={this.handleChange} value={this.state.address}
             placeholder='Address' /></p>
-          <p><input type='text' id='insert-geolocation'
-            onChange={this.handleChange} value={this.state.geoLocation}
-            placeholder='Geo Location' /></p>
+          <p><input type='text' id='insert-geolocation-lat'
+            onChange={this.handleChange} value={this.state.geoLocationLat}
+            placeholder='Geo Location Lat' /></p>
+          <p><input type='text' id='insert-geolocation-long'
+            onChange={this.handleChange} value={this.state.geoLocationLong}
+            placeholder='Geo Location Long' /></p>
           <p><textarea id='insert-description' onChange={this.handleChange}
             value={this.state.description} placeholder='Description' /></p>
           <p><select id='insert-type' value={this.state.typeId}
