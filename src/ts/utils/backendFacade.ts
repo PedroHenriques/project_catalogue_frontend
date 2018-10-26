@@ -142,7 +142,8 @@ export const pwReset = (
 export const insertProperty = (
   args: {
     title: string, numberOfBeds: string, address: string, countryId: string,
-    geoLocation: string, description: string, typeId: string,
+    geoLocationLat: string, geoLocationLong: string, description: string,
+    typeId: string,
   }
 ): Promise<void> => fetch(
   `${apiBaseUrl}properties/`,
@@ -154,7 +155,8 @@ export const insertProperty = (
       numberOfBeds: args.numberOfBeds,
       address: args.address,
       countryId: args.countryId,
-      geoLocation: args.geoLocation,
+      geoLocationLat: args.geoLocationLat,
+      geoLocationLong: args.geoLocationLong,
       description: args.description,
       typeId: args.typeId,
     }),
