@@ -71,6 +71,7 @@ export default class PropertyList extends React.Component<IProps, IState> {
 
         return(
           <Property
+            key={property.id}
             id={property.id}
             title={property.title}
             propertyType={property.propertyType}
