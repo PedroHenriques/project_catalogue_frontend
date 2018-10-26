@@ -19,7 +19,10 @@ const handleInsertProperty = (store: Store<IState, IFluxStandardAction>) =>
         numberOfBeds: (action as IInsertPropertyAction).payload.numberOfBeds,
         address: (action as IInsertPropertyAction).payload.address,
         countryId: (action as IInsertPropertyAction).payload.countryId,
-        geoLocation: (action as IInsertPropertyAction).payload.geoLocation,
+        geoLocationLat: (action as IInsertPropertyAction).payload
+          .geoLocationLat,
+        geoLocationLong: (action as IInsertPropertyAction).payload
+          .geoLocationLong,
         description: (action as IInsertPropertyAction).payload.description,
         typeId: (action as IInsertPropertyAction).payload.typeId,
       })
