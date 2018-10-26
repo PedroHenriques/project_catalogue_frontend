@@ -15,8 +15,9 @@ const handleRegister = (store: Store<IState, IFluxStandardAction>) =>
     const state = store.getState();
     if (!state.user.isLoggedIn && !state.user.isLoggingIn) {
       store.dispatch(registering());
+      const userEmail = (action as IRegisterAction).payload.email;
       registerAccount({
-        email: (action as IRegisterAction).payload.email,
+        email: userEmail,
         password: (action as IRegisterAction).payload.password,
         name: (action as IRegisterAction).payload.name,
       })
