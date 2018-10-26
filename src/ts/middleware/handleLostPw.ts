@@ -17,7 +17,11 @@ const handleLostPw = (store: Store<IState, IFluxStandardAction>) =>
 
       requestPwReset({ email })
       .then(() => {
-        window.alert('An email was sent.');
+        window.alert(
+          'The password recovery process was successfully started.' +
+          `An email was sent to "${email}" with a link to set your ` +
+          'new password.'
+        );
       })
       .catch(error => {
         window.alert(error);
