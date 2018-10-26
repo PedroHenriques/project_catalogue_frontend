@@ -1,5 +1,6 @@
 'use strict';
 import * as React from 'react';
+import Property from './Property';
 import { IProperty } from '../interfaces/react';
 
 export interface IProps {
@@ -69,17 +70,17 @@ export default class PropertyList extends React.Component<IProps, IState> {
         }
 
         return(
-        <div id={`property-${property.id}`} key={`property-${property.id}`}
-        className='property-card'>
-          <p><b>Title:</b> {property.title}</p>
-          <p><b>Type:</b> {property.propertyType}</p>
-          <p><b>#Beds:</b> {property.numberOfBeds}</p>
-          <p><b>Address:</b> {property.address}</p>
-          <p><b>Country:</b> {property.country}</p>
-          <p><b>Description:</b> {property.description}</p>
-          <p><b>Geolocation Lat:</b> {property.geoLocationLat}</p>
-          <p><b>Geolocation Long:</b> {property.geoLocationLong}</p>
-        </div>
+          <Property
+            id={property.id}
+            title={property.title}
+            propertyType={property.propertyType}
+            numberOfBeds={property.numberOfBeds}
+            address={property.address}
+            country={property.country}
+            description={property.description}
+            geoLocationLat={property.geoLocationLat}
+            geoLocationLong={property.geoLocationLong}
+          />
         );
       });
     }
