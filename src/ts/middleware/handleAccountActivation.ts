@@ -24,6 +24,11 @@ const handleAccountActivation = (store: Store<IState, IFluxStandardAction>) =>
       .then(() => {
         store.dispatch(activatedAccount());
         store.dispatch(showLogIn());
+        store.dispatch(flash({
+          messages: [
+            { message: 'Your account is now activate.', type: 'success' },
+          ],
+        }));
       })
       .catch(error => {
         store.dispatch(showLogIn());
