@@ -1,6 +1,6 @@
 'use strict';
 import { Action } from 'redux';
-import { IProperties } from './redux';
+import { IProperties, IFlashMessage } from './redux';
 
 export interface IFluxStandardAction extends Action {
   error?: boolean,
