@@ -39,6 +39,11 @@ export interface IUi {
     'insertProperty',
 }
 
+export interface IFlashMessage {
+  message: string,
+  type: 'success' | 'error' | 'info',
+}
+
 export interface IResetPw {
   email: string,
   token: string,
