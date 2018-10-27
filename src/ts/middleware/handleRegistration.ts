@@ -24,10 +24,15 @@ const handleRegister = (store: Store<IState, IFluxStandardAction>) =>
         name: (action as IRegisterAction).payload.name,
       })
       .then(() => {
-        window.alert(
-          'Your registration was sucessfull.\n' +
-          `An email was sent to "${userEmail}" with an activation link.`
-        );
+        store.dispatch(flash({
+          messages: [
+            {
+              message: 'Your registration was sucessfull.' +
+                `An email was sent to "${userEmail}" with an activation link.`,
+              type: 'success'
+            },
+          ],
+        }));
         store.dispatch(registered());
       })
       .catch(error => {
