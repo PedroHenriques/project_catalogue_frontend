@@ -1,5 +1,6 @@
 'use strict';
 import * as React from 'react';
+import { IFlashMessage } from '../interfaces/react';
 
 export interface IProps {
   messages: string[],
