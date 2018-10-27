@@ -4,6 +4,7 @@ import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import FlashMessagesComponent from '../components/FlashMessages';
 import { IState } from '../interfaces/redux';
+import { IFlashMessage } from '../interfaces/react';
 
 interface IMapStateToProps {
   messages: string[],
