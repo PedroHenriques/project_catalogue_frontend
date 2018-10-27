@@ -1,7 +1,9 @@
 'use strict';
 import { Dispatch, Store } from 'redux';
 import { REGISTER } from '../actions/actionTypes';
-import { registering, registered, registerFailed } from '../actions/creators';
+import {
+  registering, registered, registerFailed, flash
+} from '../actions/creators';
 import { registerAccount } from '../utils/backendFacade';
 import { IState } from '../interfaces/redux';
 import {
