@@ -203,3 +203,12 @@ export function flash(
     payload,
   });
 }
+
+export function unFlash(
+  payload: { count: number }
+): ActionInterfaces.IUnFlashAction {
+  return({
+    type: ActionTypes.UNFLASH,
+    payload,
+  });
+}
