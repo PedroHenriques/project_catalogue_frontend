@@ -6,7 +6,7 @@ const initialState: string[] = [];
 
 export default function flashMessages(
   state: string[] = initialState,
-  action: IFlashAction
+  action: IFlashAction | IUnFlashAction
 ): string[] {
   switch (action.type) {
     case FLASH:
