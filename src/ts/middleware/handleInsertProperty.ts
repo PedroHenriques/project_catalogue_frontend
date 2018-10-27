@@ -27,7 +27,6 @@ const handleInsertProperty = (store: Store<IState, IFluxStandardAction>) =>
         typeId: (action as IInsertPropertyAction).payload.typeId,
       })
       .then(() => {
-        window.alert('Property Added');
         store.dispatch(home());
       })
       .catch(error => {
