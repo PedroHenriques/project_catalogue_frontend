@@ -37,6 +37,11 @@ const handleRegister = (store: Store<IState, IFluxStandardAction>) =>
       })
       .catch(error => {
         store.dispatch(registerFailed());
+        store.dispatch(flash({
+          messages: [
+            { message: error, type: 'error' },
+          ],
+        }));
       });
     }
     return;
