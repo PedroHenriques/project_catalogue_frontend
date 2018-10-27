@@ -7,7 +7,7 @@ import { IState } from '../interfaces/redux';
 import { IFlashMessage } from '../interfaces/react';
 
 interface IMapStateToProps {
-  messages: string[],
+  messages: IFlashMessage[],
 }
 
 interface IMapDispatchToProps {
