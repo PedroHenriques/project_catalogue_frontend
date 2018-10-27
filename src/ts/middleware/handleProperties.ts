@@ -2,7 +2,7 @@
 import { Dispatch, Store } from 'redux';
 import { normalize } from 'normalizr';
 import { GET_ALL_PROPERTIES, HOME } from '../actions/actionTypes';
-import { gotProperties } from '../actions/creators';
+import { gotProperties, flash } from '../actions/creators';
 import { getAllProperties } from '../utils/backendFacade';
 import { propertiesSchema } from '../schemas';
 import { IState, IProperties } from '../interfaces/redux';
