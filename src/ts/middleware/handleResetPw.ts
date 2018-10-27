@@ -28,6 +28,11 @@ const handleResetPw = (store: Store<IState, IFluxStandardAction>) =>
       })
       .catch(error => {
         store.dispatch(showLogIn());
+        store.dispatch(flash({
+          messages: [
+            { message: error, type: 'error' },
+          ],
+        }));
       });
     }
     return;
