@@ -196,7 +196,7 @@ export function showInsertProperty(
 }
 
 export function flash(
-  payload: { messages: string[] }
+  payload: { messages: IFlashMessage[] }
 ): ActionInterfaces.IFlashAction {
   return({
     type: ActionTypes.FLASH,
