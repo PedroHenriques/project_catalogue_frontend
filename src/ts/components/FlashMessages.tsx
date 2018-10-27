@@ -11,7 +11,7 @@ export default class FlashMessages extends React.Component<IProps, {}> {
     const children: JSX.Element[] = this.props.messages.map((msg, index) => {
       return(
         <div key={`flashMsg${index}`} id={`flashMsg${index}`}
-        className='flashMsg'>
+        className={`flashMsg ${msg.type}`}>
           <p>{ msg.message }</p>
         </div>
       );
