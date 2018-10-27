@@ -12,6 +12,9 @@ export default function flashMessages(
     case FLASH:
       return([ ...(action as IFlashAction).payload.messages, ...state ]);
 
+    case UNFLASH:
+      return([ ...state ].slice(0, -(action as IUnFlashAction).payload.count));
+
     default:
       return(state);
   }
