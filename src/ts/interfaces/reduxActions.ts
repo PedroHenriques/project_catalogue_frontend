@@ -137,3 +137,9 @@ export interface IFlashAction extends IFluxStandardAction {
     messages: string[],
   },
 }
+
+export interface IUnFlashAction extends IFluxStandardAction {
+  payload: {
+    count: number,
+  },
+}
