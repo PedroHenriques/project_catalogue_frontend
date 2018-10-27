@@ -6,6 +6,7 @@ export interface IState {
   properties: IProperties | null,
   user: IUser,
   ui: IUi,
+  flashMessages: string[],
   resetPW: IResetPw | null,
 }
 
