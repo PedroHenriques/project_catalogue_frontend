@@ -1,7 +1,7 @@
 'use strict';
 import { Dispatch, Store } from 'redux';
 import { RESET_PW } from '../actions/actionTypes';
-import { showLogIn } from '../actions/creators';
+import { showLogIn, flash } from '../actions/creators';
 import { pwReset } from '../utils/backendFacade';
 import { IState } from '../interfaces/redux';
 import {
