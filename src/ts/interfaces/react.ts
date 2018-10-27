@@ -11,3 +11,8 @@ export interface IProperty {
   propertyType: string,
   country: string,
 }
+
+export interface IFlashMessage {
+  message: string,
+  type: 'success' | 'error' | 'info',
+}
