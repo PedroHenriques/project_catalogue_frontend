@@ -35,8 +35,7 @@ export interface IUser {
 }
 
 export interface IUi {
-  pageToShow: 'home' | 'login' | 'register' | 'lostPw' | 'resetPw' |
-    'insertProperty',
+  pageToShow: 'home' | 'login' | 'register' | 'lostPw' | 'insertProperty',
 }
 
 export interface IFlashMessage {
