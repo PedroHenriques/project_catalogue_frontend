@@ -9,6 +9,9 @@ export default function flashMessages(
   action: IFlashAction
 ): string[] {
   switch (action.type) {
+    case FLASH:
+      return([ ...(action as IFlashAction).payload.messages, ...state ]);
+
     default:
       return(state);
   }
