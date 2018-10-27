@@ -16,7 +16,6 @@ const handleResetPw = (store: Store<IState, IFluxStandardAction>) =>
     if (!state.user.isLoggedIn && !state.user.isLoggingIn) {
       pwReset({ ...(action as IResetPwAction).payload })
       .then(() => {
-        window.alert('Your password was successfully changed.');
         store.dispatch(showLogIn());
       })
       .catch(error => {
