@@ -1,6 +1,6 @@
 'use strict';
-import { FLASH } from '../actions/actionTypes';
-import { IFlashAction } from '../interfaces/reduxActions';
+import { FLASH, UNFLASH } from '../actions/actionTypes';
+import { IFlashAction, IUnFlashAction } from '../interfaces/reduxActions';
 
 const initialState: string[] = [];
 
