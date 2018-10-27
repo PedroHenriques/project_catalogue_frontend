@@ -6,7 +6,7 @@ import { IFlashMessage } from '../interfaces/redux';
 const initialState: IFlashMessage[] = [];
 
 export default function flashMessages(
-  state: string[] = initialState,
+  state: IFlashMessage[] = initialState,
   action: IFlashAction | IUnFlashAction
 ): string[] {
   switch (action.type) {
