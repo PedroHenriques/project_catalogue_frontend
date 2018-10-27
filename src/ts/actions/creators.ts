@@ -194,3 +194,12 @@ export function showInsertProperty(
     payload: {},
   });
 }
+
+export function flash(
+  payload: { messages: string[] }
+): ActionInterfaces.IFlashAction {
+  return({
+    type: ActionTypes.FLASH,
+    payload,
+  });
+}
