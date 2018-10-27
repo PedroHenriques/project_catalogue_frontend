@@ -8,7 +8,7 @@ const initialState: IFlashMessage[] = [];
 export default function flashMessages(
   state: IFlashMessage[] = initialState,
   action: IFlashAction | IUnFlashAction
-): string[] {
+): IFlashMessage[] {
   switch (action.type) {
     case FLASH:
       return([ ...(action as IFlashAction).payload.messages, ...state ]);
