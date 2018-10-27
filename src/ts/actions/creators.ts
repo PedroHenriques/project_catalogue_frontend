@@ -1,7 +1,7 @@
 'use strict';
 import * as ActionTypes from '../actions/actionTypes';
 import * as ActionInterfaces from '../interfaces/reduxActions';
-import { IProperties } from '../interfaces/redux';
+import { IProperties, IFlashMessage } from '../interfaces/redux';
 
 export function home(): ActionInterfaces.IHomeAction {
   return({
