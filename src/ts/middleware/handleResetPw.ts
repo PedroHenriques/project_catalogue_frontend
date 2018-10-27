@@ -17,6 +17,14 @@ const handleResetPw = (store: Store<IState, IFluxStandardAction>) =>
       pwReset({ ...(action as IResetPwAction).payload })
       .then(() => {
         store.dispatch(showLogIn());
+        store.dispatch(flash({
+          messages: [
+            {
+              message: 'Your password was successfully changed.',
+              type: 'success',
+            },
+          ],
+        }));
       })
       .catch(error => {
         window.alert(error);
