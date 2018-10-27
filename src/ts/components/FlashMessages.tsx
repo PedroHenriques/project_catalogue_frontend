@@ -3,7 +3,7 @@ import * as React from 'react';
 import { IFlashMessage } from '../interfaces/react';
 
 export interface IProps {
-  messages: string[],
+  messages: IFlashMessage[],
 }
 
 export default class FlashMessages extends React.Component<IProps, {}> {
