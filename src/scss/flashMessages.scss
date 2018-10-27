@@ -1,0 +1,14 @@
+#flash-messages {
+  position: fixed;
+  top: $headerHeight;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column-reverse;
+
+  .flashMsg {
+    width: 100%;
+    padding: 1%;
+    background-color: red;
+  }
+}
