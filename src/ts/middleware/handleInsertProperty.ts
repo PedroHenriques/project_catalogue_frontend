@@ -28,6 +28,11 @@ const handleInsertProperty = (store: Store<IState, IFluxStandardAction>) =>
       })
       .then(() => {
         store.dispatch(home());
+        store.dispatch(flash({
+          messages: [
+            { message: 'Property Added.', type: 'success' }
+          ],
+        }));
       })
       .catch(error => {
         window.alert(error);
