@@ -131,3 +131,9 @@ export interface IShowResetPwAction extends IFluxStandardAction {
 export interface IShowInsertPropertyAction extends IFluxStandardAction {
   payload: {},
 }
+
+export interface IFlashAction extends IFluxStandardAction {
+  payload: {
+    messages: string[],
+  },
+}
