@@ -14,7 +14,7 @@ interface IMapDispatchToProps {
 }
 
 const mapStateToProps = (state: IState): IMapStateToProps => {
-  const renderName = state.ui.pageToShow;
+  const renderName = (state.resetPW !== null ? 'resetPw' : state.ui.pageToShow);
 
   return({
     componentToRender: renderName,
