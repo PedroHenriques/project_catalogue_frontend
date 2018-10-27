@@ -30,7 +30,11 @@ const handleProperties = (store: Store<IState, IFluxStandardAction>) =>
       store.dispatch(gotProperties({ properties }));
     })
     .catch(error => {
-      window.alert(error);
+      store.dispatch(flash({
+        messages: [
+          { message: error, type: 'error' },
+        ],
+      }));
     });
 
     if (action.type === HOME) { return(next(action)); }
