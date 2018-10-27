@@ -12,7 +12,7 @@ export default class FlashMessages extends React.Component<IProps, {}> {
       return(
         <div key={`flashMsg${index}`} id={`flashMsg${index}`}
         className='flashMsg'>
-          <p>{ msg }</p>
+          <p>{ msg.message }</p>
         </div>
       );
     });
