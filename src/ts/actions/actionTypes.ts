@@ -34,3 +34,4 @@ export const SHOW_RESET_PW = 'SHOW_RESET_PW';
 export const SHOW_INSERT_PROPERTY = 'SHOW_INSERT_PROPERTY';
 
 export const FLASH = 'FLASH';
+export const UNFLASH = 'UNFLASH';
