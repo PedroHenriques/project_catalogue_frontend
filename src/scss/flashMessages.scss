@@ -9,6 +9,20 @@
   .flashMsg {
     width: 100%;
     padding: 1%;
-    background-color: red;
+
+    &.success {
+      background-color: rgba(0, 255, 0, 1);
+      color: black;
+    }
+
+    &.error {
+      background-color: rgba(255, 0, 0, 1);
+      color: white;
+    }
+
+    &.info {
+      background-color: rgba(0, 0, 255 , 1);
+      color: white;
+    }
   }
 }
