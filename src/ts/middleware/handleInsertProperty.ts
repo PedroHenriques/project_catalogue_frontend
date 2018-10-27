@@ -1,7 +1,7 @@
 'use strict';
 import { Dispatch, Store } from 'redux';
 import { INSERT_PROPERTY } from '../actions/actionTypes';
-import { home } from '../actions/creators';
+import { home, flash } from '../actions/creators';
 import { insertProperty } from '../utils/backendFacade';
 import { IState } from '../interfaces/redux';
 import {
