@@ -1,11 +1,12 @@
 'use strict';
-import { IFluxStandardAction } from '../interfaces/reduxActions';
+import { FLASH } from '../actions/actionTypes';
+import { IFlashAction } from '../interfaces/reduxActions';
 
 const initialState: string[] = [];
 
 export default function flashMessages(
   state: string[] = initialState,
-  action: IFluxStandardAction
+  action: IFlashAction
 ): string[] {
   switch (action.type) {
     default:
