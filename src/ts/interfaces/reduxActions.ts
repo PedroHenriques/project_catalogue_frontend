@@ -134,7 +134,7 @@ export interface IShowInsertPropertyAction extends IFluxStandardAction {
 
 export interface IFlashAction extends IFluxStandardAction {
   payload: {
-    messages: string[],
+    messages: IFlashMessage[],
   },
 }
 
