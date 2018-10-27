@@ -30,7 +30,11 @@ const handleLostPw = (store: Store<IState, IFluxStandardAction>) =>
         }));
       })
       .catch(error => {
-        window.alert(error);
+        store.dispatch(flash({
+          messages: [
+            { message: error, type: 'error' },
+          ],
+        }));
       });
     }
     return;
