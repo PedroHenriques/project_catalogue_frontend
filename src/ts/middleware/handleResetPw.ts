@@ -27,7 +27,6 @@ const handleResetPw = (store: Store<IState, IFluxStandardAction>) =>
         }));
       })
       .catch(error => {
-        window.alert(error);
         store.dispatch(showLogIn());
       });
     }
