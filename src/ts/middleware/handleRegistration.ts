@@ -27,7 +27,7 @@ const handleRegister = (store: Store<IState, IFluxStandardAction>) =>
         store.dispatch(flash({
           messages: [
             {
-              message: 'Your registration was sucessfull.' +
+              message: 'Your registration was sucessfull. ' +
                 `An email was sent to "${userEmail}" with an activation link.`,
               type: 'success'
             },
