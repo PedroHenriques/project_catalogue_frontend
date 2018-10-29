@@ -39,6 +39,11 @@ export default class LostPassword extends React.Component<IProps, IState> {
     return;
   }
 
+  componentDidMount() {
+    const elem = document.getElementById('lostPw-email');
+    if (elem !== null) { elem.focus(); }
+  }
+
   render() {
     return(
       <div id='lost-password'>
