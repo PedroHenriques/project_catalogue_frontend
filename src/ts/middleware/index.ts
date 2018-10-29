@@ -10,9 +10,10 @@ import handleLostPw from './handleLostPw';
 import handleInsertProperty from './handleInsertProperty';
 import handleProperties from './handleProperties';
 import handleFlashMessages from './handleFlashMessages';
+import handleUi from './handleUi';
 
 export const middleware = Redux.applyMiddleware(
   routerMiddleware, handleLogIn, handleLogOut, handleRegistration,
   handleAccountActivation, handleLostPw, handleResetPw, handleInsertProperty,
-  handleProperties, handleFlashMessages
+  handleProperties, handleFlashMessages, handleUi
 );
