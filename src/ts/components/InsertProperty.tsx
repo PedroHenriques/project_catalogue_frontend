@@ -99,6 +99,11 @@ export default class InsertProperty extends React.Component<IProps, IState> {
     return;
   }
 
+  componentDidMount() {
+    const elem = document.getElementById('insert-title');
+    if (elem !== null) { elem.focus(); }
+  }
+
   render() {
     return(
       <div id='insert-property'>
