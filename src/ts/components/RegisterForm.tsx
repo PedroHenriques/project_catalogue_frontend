@@ -60,6 +60,11 @@ export default class RegisterForm extends React.Component<IProps, IState> {
     return;
   }
 
+  componentDidMount() {
+    const elem = document.getElementById('register-email');
+    if (elem !== null) { elem.focus(); }
+  }
+
   render() {
     return(
       <div id='register-form'>
