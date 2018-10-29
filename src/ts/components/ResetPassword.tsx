@@ -54,6 +54,11 @@ export default class ResetPassword extends React.Component<IProps, IState> {
     return;
   }
 
+  componentDidMount() {
+    const elem = document.getElementById('resetPw-passsword');
+    if (elem !== null) { elem.focus(); }
+  }
+
   render() {
     return(
       <div id='reset-password'>
