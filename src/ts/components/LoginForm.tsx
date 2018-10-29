@@ -46,6 +46,11 @@ export default class LoginForm extends React.Component<IProps, IState> {
     return;
   }
 
+  componentDidMount() {
+    const elem = document.getElementById('login-email');
+    if (elem !== null) { elem.focus(); }
+  }
+
   render() {
     return(
       <div id='login-form'>
