@@ -13,3 +13,12 @@ import { IFluxStandardAction } from '../interfaces/reduxActions';
 const combinedReducer = combineReducers<IState>({
   location: routerReducer, user, ui, resetPW, properties, flashMessages
 });
+
+export const reducer = (state: IState, action: IFluxStandardAction) => {
+  let actualState: IState | undefined = state;
+  if ( action.type === LOGGED_OUT ) {
+    actualState = undefined;
+  }
+
+  return(combinedReducer(actualState, action));
+};
