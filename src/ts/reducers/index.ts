@@ -10,6 +10,6 @@ import { LOGGED_OUT } from '../actions/actionTypes';
 import { IState } from '../interfaces/redux';
 import { IFluxStandardAction } from '../interfaces/reduxActions';
 
-export const reducer = combineReducers<IState>({
+const combinedReducer = combineReducers<IState>({
   location: routerReducer, user, ui, resetPW, properties, flashMessages
 });
